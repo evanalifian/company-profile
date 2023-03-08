@@ -1,0 +1,83 @@
+/* Sambutan Section */
+.sambutan {
+  padding-top: 13rem;
+}
+
+.sambutan .container {
+  align-items: center;
+  gap: 20px;
+}
+
+.sambutan .sambutan-img, .sambutan .sambutan-about {
+  flex: 1;
+}
+
+.sambutan .sambutan-img {
+  display: flex;
+  justify-content: center;
+}
+
+.sambutan .sambutan-img .thumbnail img {
+  border-radius: 5px;
+}
+
+.sambutan .sambutan-img .thumbnail {
+  border-radius: 10px;
+  width: 75%;
+  padding: 3px;
+  border: 3px solid #ddd;
+}
+
+.sambutan .sambutan-about {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sambutan .sambutan-about p {
+  text-align: justify;
+}
+
+.sambutan .sambutan-about a {
+  background-color: #4d648d;
+  padding: 13px;
+  display: inline-block;
+  width: max-content;
+  border-radius: 10px;
+  color: white;
+}
+/* Akhir Sambutan Section */
+
+
+/* Kejuruan Section */
+.kujuruan .container {
+  display: grid;
+}
+/* Akhir Kejuruan Section */
+
+
+
+
+/* ===== Responsive Breakpoint ===== */
+/* Tablet */
+@media (max-width: 884px) {
+  .sambutan .container {
+    flex-direction: column;
+  }
+
+  .sambutan .sambutan-about h2 {
+    text-align: center;
+  }
+}
+
+
+/* Mobile Phone */
+@media (max-width: 576px) {
+  .sambutan {
+    padding-top: 33rem;
+  }
+
+  .sambutan .sambutan-img .thumbnail {
+    width: 90%;
+  }
+}
