@@ -8,14 +8,21 @@
 }
 
 body {
-  height: 3000px;
+  height: 9000px;
   overflow-x: hidden;
+}
+
+.container, .container-grid {
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.container-grid {
+  display: grid;
 }
 
 .container {
   height: 100%;
-  margin: auto;
-  padding: 0 1rem;
   display: flex;
 }
 
@@ -25,17 +32,9 @@ header {
   position: relative;
 }
 
-i {
-  font-size: 20px;
-}
-
 /* Card */
 .card {
-  width: 320px;
-  background-color: #3b7dd8;
-  color: #eee;
   padding: 20px;
-  text-align: center;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -44,10 +43,6 @@ i {
 
 .card i {
   font-size: 30px;
-}
-
-.card p {
-  font-size: 11px;
 }
 /* Akhir Card */
 
@@ -141,7 +136,7 @@ nav .toggler span:last-child.rotate {
 .welcoming a {
   width: max-content;
   display: inline-block;
-  background-color: #283655;
+  background-color: #3b7dd8;
   padding: 15px;
   border-radius: 10px;
   color: white;
@@ -152,7 +147,7 @@ nav .toggler span:last-child.rotate {
 /* Main Card */
 .main-card {
   position: absolute;
-  bottom: -70px;
+  bottom: -80px;
   right: 0;
   left: 0;
 }
@@ -161,15 +156,37 @@ nav .toggler span:last-child.rotate {
   justify-content: center;
   gap: 20px;
 }
+
+.main-card .card {
+  width: 320px;
+  background-color: #4a91f2;
+  color: #eee;
+  text-align: center;
+}
+
+.main-card .card h4 {
+  margin-top: 10px;
+}
+
+.main-card .card p {
+  font-size: 12px;
+}
 /* Akhir Main Card */
 
 
 
 
 /* ===== Responsive Breakpoint ===== */
+/* Laptop */
+@media (min-width: 1200px) {
+  .container, .container-grid {
+    width: 1200px;
+  }
+}
+
 /* Desktop */
 @media (min-width: 1440px) {
-  .container {
+  .container, .container-grid {
     width: 1440px;
   }
 
@@ -186,17 +203,9 @@ nav .toggler span:last-child.rotate {
   }
 }
 
-
-/* Laptop */
-@media (min-width: 1200px) {
-  .container {
-    width: 1200px;
-  }
-}
-
 /* Tablet */
 @media (max-width: 884px) {
-  .container {
+  .container, .container-grid {
     padding: 0 5rem;
   }
 
@@ -204,7 +213,7 @@ nav .toggler span:last-child.rotate {
     height: 43vh;
   }
 
-  .card .card-body {
+  .main-card .card .card-body {
     display: none;
   }
 
@@ -256,7 +265,7 @@ nav .toggler span:last-child.rotate {
 
 /* Mobile Phone */
 @media (max-width: 576px) {
-  .container {
+  .container, .container-grid {
     padding: 0 1rem;
   }
 
@@ -276,7 +285,7 @@ nav .toggler span:last-child.rotate {
   }
 
   .main-card {
-    bottom: -360px;
+    bottom: -370px;
   }
 
   .main-card .container {
@@ -303,9 +312,8 @@ nav .toggler span:last-child.rotate {
     width: 80%;
     background-color: white;
     border-radius: 0;
-    flex-direction: row;
     flex-wrap: wrap;
-    padding-top: 90px;
+    padding-top: 80px;
     box-shadow: unset;
     transform: translate(100%);
   }
@@ -332,5 +340,9 @@ nav .toggler span:last-child.rotate {
 
   nav .toggler span {
     background-color: #283655;
+  }
+  
+  header .welcoming{
+    padding-top: 4rem;
   }
 }

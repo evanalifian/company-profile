@@ -1,6 +1,19 @@
+main h1 {
+  font-size: 35px;
+}
+
+.kejuruan, .sponsor, .berita {
+  margin-top: 7rem;
+}
+
+.kejuruan .card, .berita .card {
+  text-align: start;
+}
+
+
 /* Sambutan Section */
 .sambutan {
-  padding-top: 13rem;
+  padding: 12rem 0 2rem;
 }
 
 .sambutan .container {
@@ -39,7 +52,7 @@
 }
 
 .sambutan .sambutan-about a {
-  background-color: #4d648d;
+  background-color: #6497b1;
   padding: 13px;
   display: inline-block;
   width: max-content;
@@ -50,10 +63,71 @@
 
 
 /* Kejuruan Section */
-.kujuruan .container {
-  display: grid;
+.kejuruan .container {
+  flex-direction: column;
+  text-align: center;
+}
+
+.kejuruan .container-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.kejuruan p {
+  font-size: 17px;
+  margin: 10px 0 35px;
+}
+
+.kejuruan .card {
+  color: #eee;
+  background-color: #005b96;
+}
+
+.kejuruan .card .card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 /* Akhir Kejuruan Section */
+
+
+/* Sponsor Section */
+.sponsor {
+ padding: 3rem 0;
+  background-color: #011f4b;
+}
+
+.sponsor .container {
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+/* Akhir Sponsor Section */
+
+
+/* Berita Terbaru Section */
+.berita .card {
+  width: 350px;
+  /* padding: 0; */
+}
+
+.berita .card .card-writter {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.berita .card .card-writter img {
+  border-radius: 50%;
+  border: 2px solid #011f4b;
+  padding: 5px;
+}
+
+.berita .card .card-writter .card-writter-name p {
+  font-size: 12px;
+}
+/* Akhir Berita Terbaru Section */
 
 
 
@@ -61,6 +135,10 @@
 /* ===== Responsive Breakpoint ===== */
 /* Tablet */
 @media (max-width: 884px) {
+  .sambutan {
+    padding-top: 10rem;
+  }
+
   .sambutan .container {
     flex-direction: column;
   }
