@@ -2,12 +2,31 @@ main h1 {
   font-size: 35px;
 }
 
-.kejuruan, .sponsor, .berita {
-  margin-top: 7rem;
+.kejuruan, .sponsor, .berita, .testimoni {
+  margin-top: 10rem;
 }
 
 .kejuruan .card, .berita .card {
   text-align: start;
+}
+
+.berita h1, .testimoni h1 {
+  margin-bottom: 30px;
+}
+
+.berita .card .card-writter, .testimoni .card .card-header {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.card .card-name span {
+  font-size: 13px;
+}
+
+hr {
+  height: 7px;
+  background-color: black;
 }
 
 
@@ -69,7 +88,7 @@ main h1 {
 }
 
 .kejuruan .container-grid {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
@@ -107,15 +126,22 @@ main h1 {
 
 
 /* Berita Terbaru Section */
-.berita .card {
-  width: 350px;
-  /* padding: 0; */
+.berita .container-grid {
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-auto-flow: column;
+  grid-auto-columns: 350px;
+  overflow-x: scroll;
+  gap: 50px;
+  padding-bottom: 10px;
 }
 
-.berita .card .card-writter {
-  display: flex;
-  align-items: center;
-  column-gap: 15px;
+.berita .container-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.berita .card {
+  background-color: #f7f7f7;
+  box-shadow: 3px 5px 8px #333;
 }
 
 .berita .card .card-writter img {
@@ -124,10 +150,83 @@ main h1 {
   padding: 5px;
 }
 
-.berita .card .card-writter .card-writter-name p {
-  font-size: 12px;
+.berita .card > a {
+  color: black;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.berita .card > a img {
+  border-radius: 5px;
 }
 /* Akhir Berita Terbaru Section */
+
+
+/* Testimoni Section */
+.testimoni .container-grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px 50px;
+}
+
+.testimoni .card {
+  border: 2px solid #999;
+}
+
+.testimoni .card .card-body p {
+  font-size: 14px;
+}
+/* Akhir Testimoni Section */
+
+
+/* Footer */
+footer {
+  margin-top: 15rem;
+  padding: 5rem 0;
+}
+
+footer a, footer h2 {
+  color: #555;
+}
+
+footer h2 {
+  margin-bottom: 15px;
+}
+
+footer .container-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 50px;
+}
+
+footer .informasi-kontak ul li a, footer .socials ul li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+footer .informasi-kontak ul li a i, footer .socials ul li a i {
+  font-size: 20px;
+}
+
+footer .informasi-kontak ul li a span, footer .socials ul li a span {
+  font-size: 13px;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer .container {
+  margin-top: 100px;
+  justify-content: center;
+}
+
+footer .copyright {
+  font-size: 14px;
+}
+/* Akhir Footer */
 
 
 
@@ -157,5 +256,18 @@ main h1 {
 
   .sambutan .sambutan-img .thumbnail {
     width: 90%;
+  }
+}
+
+
+/* Mini Mobile Phone */
+@media (max-width: 320px) {
+  .kejuruan .container-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .berita .container-grid {
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-auto-columns: 270px;
   }
 }

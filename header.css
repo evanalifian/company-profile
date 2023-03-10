@@ -8,8 +8,7 @@
 }
 
 body {
-  height: 9000px;
-  overflow-x: hidden;
+  /* height: 9000px; */
 }
 
 .container, .container-grid {
